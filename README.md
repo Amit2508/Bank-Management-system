@@ -1,3 +1,3 @@
 # Bank-Management-system
 
-Tech - Java
+Tech - Java , MySQL
