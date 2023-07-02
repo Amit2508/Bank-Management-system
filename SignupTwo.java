@@ -175,7 +175,17 @@ public class SignupTwo extends JFrame implements ActionListener {
         String span = pan.getText();
         String saadhar = aadhar.getText();
 
-     
+        try {
+            Conn c = new Conn();
+            String query = "insert into signuptwo values('" + formno + "', '" + sreligion + "', '" + scategory + "', '"
+                    + sincome + "','" + seducation + "','" + soccupation + "','" + span + "','" + saadhar + "','"
+                    + seniorcitizen + "','" + existingaccount + "')";
+            c.s.executeUpdate(query);
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+    }
+
     public static void main(String args[]) {
         new SignupTwo("");
     }
